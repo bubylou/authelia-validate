@@ -1,4 +1,4 @@
-# Authelia Action
+# Authelia Validate
 
 This action run a validation check on an authelia configuration file.
 
@@ -21,7 +21,7 @@ steps:
     uses: actions/checkout@v4
 
   - name: Validate config
-    uses: bubylou/authelia-action@v1
+    uses: bubylou/authelia-validate@v1
     env:
       AUTHELIA_JWT_SECRET: test
       AUTHELIA_SESSION_SECRET: test

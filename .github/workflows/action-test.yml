@@ -1,13 +1,13 @@
 on: [push]
 
 jobs:
-  authelia-action:
+  test:
     runs-on: ubuntu-latest
     name: Test action
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Authelia action
+      - name: Authelia validate
         id: authelia
-        uses: bubylou/authelia-action@v1
+        uses: bubylou/authelia-validate@v1

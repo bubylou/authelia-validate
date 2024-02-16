@@ -1,5 +1,5 @@
 # action.yml
-name: 'Authelia Action'
+name: 'Authelia Validate'
 description: 'Validate the Authelia configuration file'
 branding:
   icon: check
