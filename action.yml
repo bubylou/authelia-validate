@@ -1,6 +1,9 @@
 # action.yml
 name: 'Authelia Action'
 description: 'Validate the Authelia configuration file'
+branding:
+  icon: check
+  color: blue
 inputs:
   file-path:
     description: 'Path to configuration file'
