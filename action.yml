@@ -1,0 +1,13 @@
+# action.yml
+name: 'Authelia Action'
+description: 'Validate the Authelia configuration file'
+inputs:
+  file-path:
+    description: 'Path to configuration file'
+    required: true
+    default: './configuration.yml'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.file-path }}
