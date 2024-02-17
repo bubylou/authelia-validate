@@ -9,6 +9,9 @@ inputs:
     description: 'Path to configuration file'
     required: true
     default: './configuration.yml'
+outputs:
+  errors:
+    description: 'Errors returned if any'
 runs:
   using: 'docker'
   image: 'Dockerfile'

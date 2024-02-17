@@ -10,4 +10,4 @@ jobs:
 
       - name: Authelia validate
         id: authelia
-        uses: bubylou/authelia-validate@v1
+        uses: bubylou/authelia-validate@v2
