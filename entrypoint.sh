@@ -1,4 +1,5 @@
 #!/bin/sh
+
 {
 	echo "### Authelia Validate Output"
 	echo "\`\`\`"
