@@ -1,6 +1,6 @@
 # Authelia Validate
 
-This action run a validation check on an authelia configuration file.
+This action run a validation check on an authelia configuration file. The output of this command is returned as a Github step summary. Contained in the output is a detailed list of all the configuration errors if any exist.
 
 ## Inputs
 
@@ -21,7 +21,7 @@ steps:
     uses: actions/checkout@v4
 
   - name: Validate config
-    uses: bubylou/authelia-validate@v1
+    uses: bubylou/authelia-validate@v2
     env:
       AUTHELIA_JWT_SECRET: test
       AUTHELIA_SESSION_SECRET: test
