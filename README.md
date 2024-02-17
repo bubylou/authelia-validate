@@ -1,6 +1,6 @@
 # Authelia Validate
 
-This action run a validation check on an authelia configuration file.
+This action run a validation check on an authelia configuration file. The output of this command is returned as a Github step summary. Contained in the output is a detailed list of all the configuration errors if any exist.
 
 ## Inputs
 
