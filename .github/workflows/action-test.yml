@@ -11,13 +11,13 @@ jobs:
 
       - name: Authelia validate success
         id: success
-        uses: bubylou/authelia-validate@v2
+        uses: bubylou/authelia-validate@v3
         with:
           file-path: .github/config-success.yml
 
       - name: Authelia validate failure
         id: failure
         continue-on-error: true
-        uses: bubylou/authelia-validate@v2
+        uses: bubylou/authelia-validate@v3
         with:
           file-path: .github/config-failure.yml
