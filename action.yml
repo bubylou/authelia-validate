@@ -9,6 +9,10 @@ inputs:
     description: 'Path to configuration file'
     required: true
     default: './configuration.yml'
+  version:
+    description: 'Version of Authelia to check against'
+    required: true
+    default: 'latest'
 runs:
   using: 'docker'
   image: 'Dockerfile'

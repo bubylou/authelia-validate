@@ -1,4 +1,4 @@
-FROM authelia/authelia:latest
+FROM authelia/authelia:$INPUT_VERSION
 
 LABEL org.opencontainers.image.authors="Nicholas Malcolm"
 LABEL org.opencontainers.image.source="https://github.com/bubylou/authelia-validate"
