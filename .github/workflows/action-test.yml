@@ -14,6 +14,7 @@ jobs:
         uses: bubylou/authelia-validate@v3
         with:
           file-path: .github/config-success.yml
+          version: v4.37.5
 
       - name: Authelia validate failure
         id: failure
@@ -21,3 +22,4 @@ jobs:
         uses: bubylou/authelia-validate@v3
         with:
           file-path: .github/config-failure.yml
+          version: latest
