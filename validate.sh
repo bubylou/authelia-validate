@@ -1,9 +1,12 @@
 #!/bin/sh
 
+curl -LO "https://github.com/authelia/authelia/releases/download/$INPUT_VERSION/authelia-$INPUT_VERSION-linux-amd64.tar.gz"
+tar xf "authelia-$INPUT_VERSION-linux-amd64.tar.gz"
+
 {
 	echo "### Authelia Validate Output"
 	echo "\`\`\`"
-	authelia validate-config --config $1
+	./authelia-linux-amd64 validate-config --config $INPUT_FILE_PATH
 	echo ""
 	echo "\`\`\`"
 } >> $GITHUB_STEP_SUMMARY

@@ -8,6 +8,10 @@ This action run a validation check on an authelia configuration file. The output
 
 **Required** The file path from the repositroy root to the configuration.yml file. Default `./configuration.yml`.
 
+### `version`
+
+**Required** Authelia version used to check the configuration file against. Default `v4.37.5`.
+
 ## Enironment Variables
 
 If the configuration file excludes any setting in favor of pulling them from an environment variable then those variables will also need to be set in the action. Any string can be used instead of actual enviroment variables being used with the exception of `AUTHELIA_STORAGE_ENCRYPTION_KEY` which must be at least 20 characters long. An example of using these dummy environment variables is included in the example below.
@@ -28,4 +32,5 @@ steps:
       AUTHELIA_STORAGE_ENCRYPTION_KEY: twentycharacterslong
     with:
       file-path: ./authelia/configuration.yml
+      version: v4.37.5
 ```

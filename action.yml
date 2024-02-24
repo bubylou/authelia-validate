@@ -9,8 +9,22 @@ inputs:
     description: 'Path to configuration file'
     required: true
     default: './configuration.yml'
+  version:
+    description: 'Version of Authelia to check against'
+    required: true
+    default: 'v4.37.5'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.file-path }}
+  using: 'composite'
+  steps:
+    - name: Set GitHub Path
+      run: echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
+      shell: bash
+      env:
+        GITHUB_ACTION_PATH: ${{ github.action_path }}
+
+    - name: Validate
+      run: validate.sh
+      shell: bash
+      env:
+        INPUT_FILE_PATH: ${{ inputs.file-path }}
+        INPUT_VERSION: ${{ inputs.version }}
