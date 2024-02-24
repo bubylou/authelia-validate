@@ -25,7 +25,7 @@ steps:
     uses: actions/checkout@v4
 
   - name: Validate config
-    uses: bubylou/authelia-validate@v2
+    uses: bubylou/authelia-validate@v3
     env:
       AUTHELIA_JWT_SECRET: test
       AUTHELIA_SESSION_SECRET: test
